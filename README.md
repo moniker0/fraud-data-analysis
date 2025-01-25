@@ -1,9 +1,11 @@
 # fraud-data-analysis
 
 **Objective**
+
   The goal of this analysis is to understand patterns and trends in transaction and fraud data, identify high-risk behaviors, and develop strategies to minimize financial      losses.
 
 **Approach**
+
   **Data Exploration:** Performed a detailed review of transaction data to uncover potential anomalies and risk factors.
   **Trend Analysis:** Investigated hourly, daily, and monthly transaction trends to pinpoint high-risk periods.
   **Rule-Based Strategies:** Developed fraud detection rules based on historical patterns and threshold tuning using precision and recall to reduce false positives and flag      risky transactions.
@@ -40,6 +42,7 @@
     <img width="445" alt="image" src="https://github.com/user-attachments/assets/99bb35f3-f4b2-4a9c-ba4b-b678808c8840" />
 
 **Rule-based Loss Prevention:**
+
 Came up with the following rules to detect anomalies and evaluated performance of each rule and different combinations of rules together (using AND operator & OR operator) to come up with the final fraud strategy.
   **Rule 1:** Flag a transaction as anomalous if the transaction frequency in the last 24 hours exceeds 2 standard deviations from the mean frequency.
   **Rule 2:** Flag a transaction as anomalous if the hourly transaction frequency exceeds 1.5 standard deviations from the mean frequency.
@@ -51,6 +54,7 @@ Came up with the following rules to detect anomalies and evaluated performance o
   **Evaluate Rule Performance:**
 
   **Compare rules with eachother:**
+  
   rule 3 seems to be a good rule with high precision(12%) and recall(40%) and lower false positive rate
   <img width="370" alt="image" src="https://github.com/user-attachments/assets/4a771b8c-60d0-4e25-8d4e-689585155da5" />
 
@@ -66,6 +70,7 @@ Came up with the following rules to detect anomalies and evaluated performance o
   -   The rule (rule3_flag AND rule4_flag) has a recall of 36.708861 % an precision of 21%
 
 **Final Fraud Strategy:**
+
   Combination of rules:
   
   The following rule having a recall of 49% and precision of 12%, which is a combined rule based on above analysis, has been identified as the fraud strategy.
@@ -73,6 +78,7 @@ Came up with the following rules to detect anomalies and evaluated performance o
   (data['rule4_flag'] == True)))
 
 **Jan 24 projection before and after fraud strategy**
+
 Determine how the trends will look for Jan 2024. Showcased expectations before and after strategy implementation to understand the impact of the fraud strategy.
 <img width="538" alt="image" src="https://github.com/user-attachments/assets/49ea7340-fdc0-4376-bca0-e1d9a8e8ee01" />
 
