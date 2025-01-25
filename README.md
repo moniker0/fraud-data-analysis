@@ -47,11 +47,9 @@
 
   **Merchant Insights:**
   - Identified Merchants with highest losses over months
-    
     <img width="436" alt="image" src="https://github.com/user-attachments/assets/55c8fbf0-dcba-4661-8c26-33dd0a7612e5" />
     
   - Identified Top 10 Merchants with highest losses in Nov-23
-    
     <img width="445" alt="image" src="https://github.com/user-attachments/assets/99bb35f3-f4b2-4a9c-ba4b-b678808c8840" />
 
 ---
@@ -71,16 +69,21 @@ Came up with the following rules to detect anomalies and evaluated performance o
   **Compare rules with eachother:**
   
   rule 3 seems to be a good rule with high precision(12%) and recall(40%) and lower false positive rate
+  
   <img width="370" alt="image" src="https://github.com/user-attachments/assets/4a771b8c-60d0-4e25-8d4e-689585155da5" />
 
   Compare combination of rules (OR):
+  
   <img width="410" alt="image" src="https://github.com/user-attachments/assets/f154e3cc-c262-46ee-872a-1ebd89369465" />
+  
   - Better performing rules:
   -   The rule (rule3_flag OR rule6_flag) has a recall of 41.772152 and precision of 0.123134, with relatively lower flase positives
   -   The rule (rule3_flag OR rule5_flag) has a recall of 48.101266 and precision of 0.127090, with relatively lower flase positives
   
   Compare combination of rules (AND):
+  
   <img width="412" alt="image" src="https://github.com/user-attachments/assets/23fedb7b-504e-495f-9a73-c9f55b9bb3c6" />
+  
   - Better rules:
   -   The rule (rule3_flag AND rule4_flag) has a recall of 36.708861 % an precision of 21%
 
@@ -99,6 +102,7 @@ Came up with the following rules to detect anomalies and evaluated performance o
 **Jan 24 projection before and after fraud strategy**
 
 Determined how the trends will look for Jan 2024. Showcased expectations before and after strategy implementation to understand the impact of the fraud strategy.
+
 <img width="538" alt="image" src="https://github.com/user-attachments/assets/49ea7340-fdc0-4376-bca0-e1d9a8e8ee01" />
 
 **Historical Fraud Rate: **
