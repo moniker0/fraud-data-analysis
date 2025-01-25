@@ -57,45 +57,51 @@
 **Rule-based Loss Prevention:**
 
 Came up with the following rules to detect anomalies and evaluated performance of each rule and different combinations of rules together (using AND operator & OR operator) to come up with the final fraud strategy.
+
   **Rule 1:** Flag a transaction as anomalous if the transaction frequency in the last 24 hours exceeds 2 standard deviations from the mean frequency.
+  
   **Rule 2:** Flag a transaction as anomalous if the hourly transaction frequency exceeds 1.5 standard deviations from the mean frequency.
+  
   **Rule 3:** Flag a transaction as anomalous if the transaction amount exceeds the threshold of USD 43.79 (mean overall transaction amount)
+  
   **Rule 4:** Flag a transaction as anomalous if the geolocation mismatch exceeds 70% for a merchant.
+  
   **Rule 5:** Flag a transaction as anomalous for the merchants whose total transaction amount exceeds 3 standard deviations from the mean overall transaction amount.
+  
   **Rule 6:** Flag transactions as anomalies if their transaction time (hour) is outside the typical range for that merchant.
 
   **Evaluate Rule Performance:**
 
-  **Compare rules with eachother:**
+  **- Compare rules with eachother:**
   
-  rule 3 seems to be a good rule with high precision(12%) and recall(40%) and lower false positive rate
+    -   rule 3 seems to be a good rule with high precision(12%) and recall(40%) and lower false positive rate
   
-  <img width="370" alt="image" src="https://github.com/user-attachments/assets/4a771b8c-60d0-4e25-8d4e-689585155da5" />
+        <img width="370" alt="image" src="https://github.com/user-attachments/assets/4a771b8c-60d0-4e25-8d4e-689585155da5" />
 
-  Compare combination of rules (OR):
+  **- Compare combination of rules (OR):**
   
   <img width="410" alt="image" src="https://github.com/user-attachments/assets/f154e3cc-c262-46ee-872a-1ebd89369465" />
   
-  - Better performing rules:
-  -   The rule (rule3_flag OR rule6_flag) has a recall of 41.772152 and precision of 0.123134, with relatively lower flase positives
-  -   The rule (rule3_flag OR rule5_flag) has a recall of 48.101266 and precision of 0.127090, with relatively lower flase positives
+      Better performing rules:
+      -  The rule (rule3_flag OR rule6_flag) has a recall of 41.772152 and precision of 0.123134, with relatively lower flase positives
+      -  The rule (rule3_flag OR rule5_flag) has a recall of 48.101266 and precision of 0.127090, with relatively lower flase positives
   
-  Compare combination of rules (AND):
+  **- Compare combination of rules (AND):**
   
   <img width="412" alt="image" src="https://github.com/user-attachments/assets/23fedb7b-504e-495f-9a73-c9f55b9bb3c6" />
   
-  - Better rules:
-  -   The rule (rule3_flag AND rule4_flag) has a recall of 36.708861 % an precision of 21%
+      Better rules:
+      -   The rule (rule3_flag AND rule4_flag) has a recall of 36.708861 % an precision of 21%
 
 ---
 
 **Final Fraud Strategy:**
 
-  Combination of rules:
+  **- Combination of rules:**
   
-  The following rule having a recall of 49% and precision of 12%, which is a combined rule based on above analysis, has been identified as the fraud strategy.
-  data['fraud_caught_by_rules_flag'] = (((data['rule3_flag'] == True) | (data['rule5_flag'] == True) | (data['rule6_flag'] == True)) | ((data['rule3_flag'] == True) & 
-  (data['rule4_flag'] == True)))
+      The following rule having a recall of 49% and precision of 12%, which is a combined rule based on above analysis, has been identified as the fraud strategy.
+      data['fraud_caught_by_rules_flag'] = (((data['rule3_flag'] == True) | (data['rule5_flag'] == True) | (data['rule6_flag'] == True)) | ((data['rule3_flag'] == True) & 
+      (data['rule4_flag'] == True)))
 
 ---
 
@@ -108,13 +114,13 @@ Determined how the trends will look for Jan 2024. Showcased expectations before 
 **Historical Fraud Rate: **
 The blue solid line shows relatively consistent fraud rates over the historical period (October-December 2023), around 9-10%. This indicates that fraud rates did not vary significantly in recent months.
 
-**Effect of the Strategy:**
+  **- Effect of the Strategy:**
 The green dashed line trends downward over time, showing a decreasing fraud rate if the fraud prevention strategy were applied retroactively. This highlights that the strategy could significantly reduce the fraud rate, with improvements accumulating over time.
 
-**January 2024 Projections:**
+  **- January 2024 Projections:**
 
-  **Without Strategy:** 
-  The blue point shows the projected fraud rate for January 2024 is around 5.28%, indicating some reduction (possibly due to seasonal or natural trends).
+  **- Without Strategy:** 
+      The blue point shows the projected fraud rate for January 2024 is around 5.28%, indicating some reduction (possibly due to seasonal or natural trends).
 
-  **With Strategy:** 
-  The green point shows the projected fraud rate drops further to around 0.29% if the strategy is applied.
+  **- With Strategy:** 
+      The green point shows the projected fraud rate drops further to around 0.29% if the strategy is applied.
