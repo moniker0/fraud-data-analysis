@@ -105,8 +105,9 @@ Came up with the following rules to detect anomalies and evaluated performance o
 
 - **Combination of rules:**
   - The following rule having a recall of 49% and precision of 12%, which is a combined rule based on above analysis, has been identified as the fraud strategy.
-    data['fraud_caught_by_rules_flag'] = (((data['rule3_flag'] == True) | (data['rule5_flag'] == True) | (data['rule6_flag'] == True)) | ((data['rule3_flag'] == True) & 
-    (data['rule4_flag'] == True)))
+  - The logic identifies anomalies based on two conditions:
+    -   A transaction is flagged if it meets any one of the following individual rules: Rule 3, Rule 5, or Rule 6.
+    -   Alternatively, a transaction is flagged if both Rule 3 and Rule 4 are triggered together.
 
 ---
 
