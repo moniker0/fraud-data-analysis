@@ -6,7 +6,7 @@
 
 **Approach**
 
-  **Data Exploration:** Performed a detailed review of transaction data to uncover potential anomalies and risk factors.
+  ****Data Exploration:**** Performed a detailed review of transaction data to uncover potential anomalies and risk factors.
   
   **Trend Analysis:** Investigated hourly, daily, and monthly transaction trends to pinpoint high-risk periods.
   
