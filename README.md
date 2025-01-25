@@ -80,7 +80,7 @@ Came up with the following rules to detect anomalies and evaluated performance o
   
   - rule 3 seems to be a good rule with high precision(12%) and recall(40%) and lower false positive rate
   
-        <img width="370" alt="image" src="https://github.com/user-attachments/assets/4a771b8c-60d0-4e25-8d4e-689585155da5" />
+  <img width="370" alt="image" src="https://github.com/user-attachments/assets/4a771b8c-60d0-4e25-8d4e-689585155da5" />
 
   **Compare combination of rules (OR):**
   
@@ -101,11 +101,10 @@ Came up with the following rules to detect anomalies and evaluated performance o
 
 **Final Fraud Strategy:**
 
-  **- Combination of rules:**
-  
-      The following rule having a recall of 49% and precision of 12%, which is a combined rule based on above analysis, has been identified as the fraud strategy.
-      data['fraud_caught_by_rules_flag'] = (((data['rule3_flag'] == True) | (data['rule5_flag'] == True) | (data['rule6_flag'] == True)) | ((data['rule3_flag'] == True) & 
-      (data['rule4_flag'] == True)))
+- **Combination of rules:**
+  - The following rule having a recall of 49% and precision of 12%, which is a combined rule based on above analysis, has been identified as the fraud strategy.
+    data['fraud_caught_by_rules_flag'] = (((data['rule3_flag'] == True) | (data['rule5_flag'] == True) | (data['rule6_flag'] == True)) | ((data['rule3_flag'] == True) & 
+    (data['rule4_flag'] == True)))
 
 ---
 
@@ -115,16 +114,16 @@ Determined how the trends will look for Jan 2024. Showcased expectations before 
 
 <img width="538" alt="image" src="https://github.com/user-attachments/assets/49ea7340-fdc0-4376-bca0-e1d9a8e8ee01" />
 
-**Historical Fraud Rate: **
+- **Historical Fraud Rate:**
 The blue solid line shows relatively consistent fraud rates over the historical period (October-December 2023), around 9-10%. This indicates that fraud rates did not vary significantly in recent months.
 
-  **- Effect of the Strategy:**
+- **Effect of the Strategy:**
 The green dashed line trends downward over time, showing a decreasing fraud rate if the fraud prevention strategy were applied retroactively. This highlights that the strategy could significantly reduce the fraud rate, with improvements accumulating over time.
 
-  **- January 2024 Projections:**
+- **January 2024 Projections:**
 
-  **- Without Strategy:** 
+  - **Without Strategy:** 
       The blue point shows the projected fraud rate for January 2024 is around 5.28%, indicating some reduction (possibly due to seasonal or natural trends).
 
-  **- With Strategy:** 
+  - **With Strategy:** 
       The green point shows the projected fraud rate drops further to around 0.29% if the strategy is applied.
