@@ -58,17 +58,17 @@
 
 Came up with the following rules to detect anomalies and evaluated performance of each rule and different combinations of rules together (using AND operator & OR operator) to come up with the final fraud strategy.
 
-  **Rule 1:** Flag a transaction as anomalous if the transaction frequency in the last 24 hours exceeds 2 standard deviations from the mean frequency.
+  **- Rule 1:** Flag a transaction as anomalous if the transaction frequency in the last 24 hours exceeds 2 standard deviations from the mean frequency.
   
-  **Rule 2:** Flag a transaction as anomalous if the hourly transaction frequency exceeds 1.5 standard deviations from the mean frequency.
+  **- Rule 2:** Flag a transaction as anomalous if the hourly transaction frequency exceeds 1.5 standard deviations from the mean frequency.
   
-  **Rule 3:** Flag a transaction as anomalous if the transaction amount exceeds the threshold of USD 43.79 (mean overall transaction amount)
+  **- Rule 3:** Flag a transaction as anomalous if the transaction amount exceeds the threshold of USD 43.79 (mean overall transaction amount)
   
-  **Rule 4:** Flag a transaction as anomalous if the geolocation mismatch exceeds 70% for a merchant.
+  **- Rule 4:** Flag a transaction as anomalous if the geolocation mismatch exceeds 70% for a merchant.
   
-  **Rule 5:** Flag a transaction as anomalous for the merchants whose total transaction amount exceeds 3 standard deviations from the mean overall transaction amount.
+  **- Rule 5:** Flag a transaction as anomalous for the merchants whose total transaction amount exceeds 3 standard deviations from the mean overall transaction amount.
   
-  **Rule 6:** Flag transactions as anomalies if their transaction time (hour) is outside the typical range for that merchant.
+  **- Rule 6:** Flag transactions as anomalies if their transaction time (hour) is outside the typical range for that merchant.
 
   **Evaluate Rule Performance:**
 
@@ -90,7 +90,7 @@ Came up with the following rules to detect anomalies and evaluated performance o
   
   <img width="412" alt="image" src="https://github.com/user-attachments/assets/23fedb7b-504e-495f-9a73-c9f55b9bb3c6" />
   
-      Better rules:
+      Better rule:
       -   The rule (rule3_flag AND rule4_flag) has a recall of 36.708861 % an precision of 21%
 
 ---
