@@ -76,25 +76,25 @@ Came up with the following rules to detect anomalies and evaluated performance o
 
   **Evaluate Rule Performance:**
 
-  **Compare rules with eachother:**
+  - **Compare rules with eachother:**
   
-  - rule 3 seems to be a good rule with high precision(12%) and recall(40%) and lower false positive rate
+    - rule 3 seems to be a good rule with high precision(12%) and recall(40%) and lower false positive rate
   
-  <img width="370" alt="image" src="https://github.com/user-attachments/assets/4a771b8c-60d0-4e25-8d4e-689585155da5" />
+      <img width="370" alt="image" src="https://github.com/user-attachments/assets/4a771b8c-60d0-4e25-8d4e-689585155da5" />
 
-  **Compare combination of rules (OR):**
+  - **Compare combination of rules (OR):**
   
-  <img width="410" alt="image" src="https://github.com/user-attachments/assets/f154e3cc-c262-46ee-872a-1ebd89369465" />
+      <img width="410" alt="image" src="https://github.com/user-attachments/assets/f154e3cc-c262-46ee-872a-1ebd89369465" />
   
-  - Better performing rules:
+    - Better performing rules:
       -  The rule (rule3_flag OR rule6_flag) has a recall of 41.772152 and precision of 0.123134, with relatively lower flase positives
       -  The rule (rule3_flag OR rule5_flag) has a recall of 48.101266 and precision of 0.127090, with relatively lower flase positives
   
-  **Compare combination of rules (AND):**
+  - **Compare combination of rules (AND):**
   
-  <img width="412" alt="image" src="https://github.com/user-attachments/assets/23fedb7b-504e-495f-9a73-c9f55b9bb3c6" />
+      <img width="412" alt="image" src="https://github.com/user-attachments/assets/23fedb7b-504e-495f-9a73-c9f55b9bb3c6" />
   
-  - Better rule:
+    - Better rule:
       -   The rule (rule3_flag AND rule4_flag) has a recall of 36.708861 % an precision of 21%
 
 ---
