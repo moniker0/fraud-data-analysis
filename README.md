@@ -7,8 +7,11 @@
 **Approach**
 
   **Data Exploration:** Performed a detailed review of transaction data to uncover potential anomalies and risk factors.
+  
   **Trend Analysis:** Investigated hourly, daily, and monthly transaction trends to pinpoint high-risk periods.
-  **Rule-Based Strategies:** Developed fraud detection rules based on historical patterns and threshold tuning using precision and recall to reduce false positives and flag      risky transactions.
+  
+  **Rule-Based Strategies:** Developed fraud detection rules based on historical patterns and threshold tuning using precision and recall to reduce false positives and flag risky transactions.
+  
   **Projections:** Used simple a forecasting method to anticipate future fraud trends and enhance preventive strategies.
 
 **Interesting Findings**
